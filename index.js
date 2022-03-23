@@ -110,13 +110,8 @@ distube.on("searchNoResult", (message, query) => {
     message.channel.send("Canzone non trovata")
 
 client.on("messageCreate", (message) => {
-    if (message.content == "-market")
-        var market = new Discord.MessageEmbed()
-            .setTitle("RAPINA MARKET")
-            .setDescription("𝗔 𝗧𝗨𝗧𝗧𝗘 𝗟𝗘 𝗨𝗡𝗜𝗧𝗔' 𝗘' 𝗜𝗡 𝗖𝗢𝗥𝗦𝗢 𝗨𝗡𝗔 𝗥𝗔𝗣𝗜𝗡𝗔 𝗔𝗟 𝗠𝗔𝗥𝗞𝗘𝗧 𝗥𝗘𝗖𝗔𝗧𝗘𝗩𝗜 𝗔𝗟𝗟𝗘 𝗖𝗢𝗢𝗥𝗗𝗜𝗡𝗔𝗧𝗘")
+    if (message.content == "-market") {
+        message.channel.send("𝗔 𝗧𝗨𝗧𝗧𝗘 𝗟𝗘 𝗨𝗡𝗜𝗧𝗔' 𝗘' 𝗜𝗡 𝗖𝗢𝗥𝗦𝗢 𝗨𝗡𝗔 𝗥𝗔𝗣𝗜𝗡𝗔 𝗔𝗟 𝗠𝗔𝗥𝗞𝗘𝗧 𝗥𝗘𝗖𝗔𝗧𝗘𝗩𝗜 𝗔𝗟𝗟𝗘 𝗖𝗢𝗢𝗥𝗗𝗜𝗡𝗔𝗧𝗘 @everyone")
+    }
 
-
-        message.channel.send({ embeds : [market]})
-})
-
-})
+})})
