@@ -27,9 +27,10 @@ client.on("messageCreate", message => {
         if (!voiceChannel) {
             return message.channel.send("Devi essere in un canale vocale")
 
-    if (message.content == "-market") {
-        message.channel.send("𝗔 𝗧𝗨𝗧𝗧𝗘 𝗟𝗘 𝗨𝗡𝗜𝗧𝗔' 𝗘' 𝗜𝗡 𝗖𝗢𝗥𝗦𝗢 𝗨𝗡𝗔 𝗥𝗔𝗣𝗜𝗡𝗔 𝗔𝗟 𝗠𝗔𝗥𝗞𝗘𝗧 𝗥𝗘𝗖𝗔𝗧𝗘𝗩𝗜 𝗔𝗟𝗟𝗘 𝗖𝗢𝗢𝗥𝗗𝗜𝗡𝗔𝗧𝗘")
-    }
+            if (message.content == "!youtube") {
+                message.channel.send("Iscriviti al mio secondo canale: https://www.youtube.com/channel/UCvIafNR8ZvZyE5jVGVqgVfA")
+            }
+        
     
 
         }
