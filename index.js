@@ -114,6 +114,9 @@ client.on("messageCreate", (message) => {
         var market = new Discord.MessageEmbed()
             .setTitle("RAPINA MARKET")
             .setDescription("𝗔 𝗧𝗨𝗧𝗧𝗘 𝗟𝗘 𝗨𝗡𝗜𝗧𝗔' 𝗘' 𝗜𝗡 𝗖𝗢𝗥𝗦𝗢 𝗨𝗡𝗔 𝗥𝗔𝗣𝗜𝗡𝗔 𝗔𝗟 𝗠𝗔𝗥𝗞𝗘𝗧 𝗥𝗘𝗖𝗔𝗧𝗘𝗩𝗜 𝗔𝗟𝗟𝗘 𝗖𝗢𝗢𝗥𝗗𝗜𝗡𝗔𝗧𝗘")
+
+
+        message.channel.send({ embeds : [market]})
 })
 
 })
