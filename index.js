@@ -7,6 +7,7 @@ client.login(process.env.token);
 
 client.on("ready", () => {
     console.log("ONLINE");
+    bot.user.setActivity('rob', { type: "PLAYING"}).catch(console.error)
 })
 
 const { DisTube } = require("distube")
