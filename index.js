@@ -114,7 +114,7 @@ distube.on("searchNoResult", (message, query) => {
         .setTitle("RAPINA AL MARKET!")
         .addField("A TUTTE LE UNITA' RAPINA A UN NEGOZIETTO RECATEVI ALLE COORDINATE. RIPETO RAPINA A UN NEGOZIETTO RECATEVI ALLE COORDINATE ")
 
-    if(message.content == "-market")
+    if(message.content == "-pacific")
         var pacific = new Discord.MessageEmbed()
         .setTitle("RAPINA ALLA BANCA NAZIONALE!")
         .addField("A TUTTE LE UNITA' RAPINA ALLA BANCA NAZIONALE RECATEVI ALLE COORDINATE. RIPETO RAPINA ALLA BANCA NAZIONALE RECATEVI ALLE COORDINATE ")
