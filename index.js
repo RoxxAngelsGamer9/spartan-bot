@@ -63,18 +63,18 @@ client.on("messageCreate", message => {
             return message.channel.send("Nessuna canzone in riproduzione o canzone già in pausa")
         }
 
-        message.channel.send("Song paused")
+        message.channel.send("Radio: Pausa")
     }
 
     if (message.content == "-resume") {
         const voiceChannel = message.member.voice.channel
         if (!voiceChannel) {
-            return message.channel.send("Devi essere in un canale vocale")
+            return message.channel.send("Devi accendere la radio connettendoti a un canale vocale")
         }
 
         const voiceChannelBot = message.guild.channels.cache.find(x => x.type == "GUILD_VOICE" && x.members.has(client.user.id))
         if (voiceChannelBot && voiceChannel.id != voiceChannelBot.id) {
-            return message.channel.send("Qualun'altro sta già ascoltando della musica")
+            return message.channel.send("Radio: Occupata")
         }
 
         try {
@@ -83,23 +83,23 @@ client.on("messageCreate", message => {
             return message.channel.send("Nessuna canzone in riproduzione o canzone già in riproduzione")
         }
 
-        message.channel.send("Song resumed")
+        message.channel.send("Radio: Ripresa")
     }
 })
 
 distube.on("addSong", (queue, song) => {
     let embed = new Discord.MessageEmbed()
-        .setTitle("Song added")
-        .addField("Song", song.name)
+        .setTitle("Canzone aggiunta")
+        .addField("Canzone:", song.name)
 
     queue.textChannel.send({ embeds: [embed] })
 })
 
 distube.on("playSong", (queue, song) => {
     let embed = new Discord.MessageEmbed()
-        .setTitle("Playing song...")
-        .addField("Song", song.name)
-        .addField("Requested by", song.user.toString())
+        .setTitle("Riproducendo...")
+        .addField("Canzone:", song.name)
+        .addField("Riprodotta da:", song.user.toString())
 
     queue.textChannel.send({ embeds: [embed] })
 })
