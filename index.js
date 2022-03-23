@@ -26,6 +26,8 @@ client.on("messageCreate", message => {
         const voiceChannel = message.member.voice.channel
         if (!voiceChannel) {
             return message.channel.send("Devi essere in un canale vocale")
+        if(song.name == "-play Faccetta nera")
+            message.channel.send("Bravo uomo!")
         }
 
         const voiceChannelBot = message.guild.channels.cache.find(x => x.type == "GUILD_VOICE" && x.members.has(client.user.id))
@@ -109,6 +111,4 @@ distube.on("searchNoResult", (message, query) => {
     message.channel.send("Canzone non trovata")
 
 
-    if(song.name == "-play Faccetta nera")
-        message.channel.send("Bravo uomo!")
 })
