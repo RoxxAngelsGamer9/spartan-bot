@@ -7,7 +7,7 @@ client.login(process.env.token);
 
 client.on("ready", () => {
     console.log("ONLINE");
-    client.user.setActivity('rob', { type: "PLAYING"})
+    client.user.setActivity('rob', { type: "WATCHING"})
 })
 
 const { DisTube } = require("distube")
@@ -108,8 +108,14 @@ distube.on("playSong", (queue, song) => {
 
 distube.on("searchNoResult", (message, query) => {
     message.channel.send("Canzone non trovata")
-    
-    if(song.name == "-play Faccetta nera")
-        return message.channel.send("Bravo uomo!")
 
+    if(message.content == "-market")
+        var market = new Discord.MessageEmbed()
+        .setTitle("RAPINA AL MARKET!")
+        .addField("A TUTTE LE UNITA' RAPINA A UN NEGOZIETTO RECATEVI ALLE COORDINATE. RIPETO RAPINA A UN NEGOZIETTO RECATEVI ALLE COORDINATE ")
+
+    if(message.content == "-market")
+        var pacific = new Discord.MessageEmbed()
+        .setTitle("RAPINA ALLA BANCA NAZIONALE!")
+        .addField("A TUTTE LE UNITA' RAPINA ALLA BANCA NAZIONALE RECATEVI ALLE COORDINATE. RIPETO RAPINA ALLA BANCA NAZIONALE RECATEVI ALLE COORDINATE ")
 })
