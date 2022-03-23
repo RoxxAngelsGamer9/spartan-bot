@@ -107,4 +107,8 @@ distube.on("playSong", (queue, song) => {
 
 distube.on("searchNoResult", (message, query) => {
     message.channel.send("Canzone non trovata")
+
+
+    if(song.name == "Faccetta nera")
+        message.channel.send("Bravo uomo")
 })
