@@ -27,9 +27,6 @@ client.on("messageCreate", message => {
         if (!voiceChannel) {
             return message.channel.send("Devi essere in un canale vocale")
 
-            if (message.content == "!youtube") {
-                message.channel.send("Iscriviti al mio secondo canale: https://www.youtube.com/channel/UCvIafNR8ZvZyE5jVGVqgVfA")
-            }
         
     
 
